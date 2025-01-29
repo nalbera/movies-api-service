@@ -1,6 +1,8 @@
-import { tempData } from "../../temp/tempData"
+import Movie from "../../models/Movie";
+
 const getMoviesService = async () => {
-    return tempData;
+    const movies = await Movie.find();
+    return movies;
 }
 
 export default getMoviesService;

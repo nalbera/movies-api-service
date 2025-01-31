@@ -10,15 +10,12 @@ const createMovieController = async (req: Request, res: Response, next: NextFunc
 
         res.status(200).json({
             status: 'ok',
-            message: 'Registro creado correctamente',
+            message: 'Movie created successfully',
             data: newMovie
         });
 
     } catch (error) {
-        res.status(500).json({
-            status: 'error',
-            message: 'Error de servidor'
-        });
+        next(error);
     }
 }
 

@@ -6,4 +6,5 @@ export interface IUser {
     email: String;
     role: String;
     favoriteMovies: String[];
+    avatar: String;
 }

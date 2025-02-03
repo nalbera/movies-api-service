@@ -25,7 +25,7 @@ const loginUserController = async (req: Request, res: Response, next: NextFuncti
             throw generateErrorsUtils("Incorrect email or password", 404);
         }
 
-        const token = generateTokenUtils(user._id as string, user.email);
+        const token = generateTokenUtils(user._id as string, user.email, user.role);
 
         res.status(200).json({
             message: "User logged in successfully",

@@ -1,11 +1,12 @@
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../config/envs";
 
-const generateTokenUtils = (id: string, email: String): string => {
+const generateTokenUtils = (id: String, email: String, role: String): string => {
 
     const tokenInfo = {
         id,
-        email
+        email,
+        role
     };
     
     
